@@ -11,4 +11,5 @@ require "custom_tables/models/class_methods"
 module CustomTables
 end
 
+ActionController::Base.send(:include, CustomTables::Controllers)
 ActiveRecord::Base.send(:include, CustomTables::Models)

@@ -1,6 +1,6 @@
 module CustomTables
-  extend ActiveSupport::Concern
   module Controllers
+  extend ActiveSupport::Concern
     module ClassMethods
 
       def has_custom_index(config={})
