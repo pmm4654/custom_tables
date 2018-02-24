@@ -1,4 +1,5 @@
 module CustomTables
+  extend ActiveSupport::Concern
   module Controllers
     module ClassMethods
 
@@ -13,6 +14,9 @@ module CustomTables
         end
       end
 
+      def self.included(base)
+        base.extend ClassMethods
+      end
 
       module InstanceMethods
 

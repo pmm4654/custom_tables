@@ -1,11 +1,11 @@
 module CustomTables
   module Models
+    extend ActiveSupport::Concern
+    
     module ClassMethods
-      
       def has_custom_index
         send(:include, InstanceMethods)
       end
-
     end
 
     module InstanceMethods

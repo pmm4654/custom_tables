@@ -1,0 +1,22 @@
+PATH
+  remote: .
+  specs:
+    custom_tables (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (9.1.0)
+    rake (10.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  byebug (~> 9.1)
+  custom_tables!
+  rake (~> 10.0)
+
+BUNDLED WITH
+   1.16.0
