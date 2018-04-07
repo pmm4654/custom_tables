@@ -10,7 +10,7 @@ module CustomTables
 
     module InstanceMethods
 
-      define_method "index_display_value_for" do |property_name|
+      def index_display_value_for(property_name)
         if self.respond_to?("index_display_#{property_name}")
           display_value = self.send("index_display_#{property_name}")
         else
@@ -19,7 +19,7 @@ module CustomTables
         display_value
       end
 
-      define_method "html_table_name" do
+      def html_table_name
         "#{self.class.name.underscore.pluralize}_index_table"
       end
 
