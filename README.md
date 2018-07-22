@@ -22,7 +22,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your controller, add `has_custom_index` and add the key `:default_headers` with a value of the column headers/field names as an array.  Also add your translation base (using I18n).  
+
+For the example below, your `en.yml` would include the following:
+
+```ruby
+invoice:
+  amount: 'Amount'
+  customer_name: 'Customer Name'
+  title: 'Title'
+  description: 'Description'
+```
+
+
+The implementation in your controller would be as follows:
+```ruby
+has_custom_index :default_headers => [:amount, :customer_name, :title, :description], 
+                 :translation_base => 'invoice'
+```
+
 
 ## Development
 
