@@ -5,7 +5,6 @@ require 'byebug'
 require "custom_tables/version"
 require "custom_tables/controllers/class_methods"
 require "custom_tables/models/class_methods"
-# require 'custom_tables/helpers/custom_tables_helper'
 require 'custom_tables/railtie' if defined?(Rails)
 
 module CustomTables
